@@ -1,0 +1,21 @@
+{
+    "payment_networks": {
+        "mainnet": {
+            "node_address": "https://geth.golem.network:55555",
+            "glm_contract_address": "0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429"
+        },
+        "polygon": {
+            "node_address": "https://bor.golem.network",
+            "glm_contract_address": "0x0B220b82F3eA3B7F6d9A1D8ab58930C064A2b5Bf"
+        },
+        "rinkeby": {
+            "node_address": "http://geth.testnet.golem.network:55555",
+            "geth_poa_middleware": true,
+            "glm_contract_address": "0xd94e3DC39d4Cad1DAd634e7eb585A57A19dC7EFE"
+        },
+        "holesky": {
+            "node_address": "https://ethereum-holesky.publicnode.com/",
+            "glm_contract_address": "0x8888888815bf4DB87e57B609A50f938311EEd068"
+        }
+    }
+}
