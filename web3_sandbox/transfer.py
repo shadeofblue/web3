@@ -33,10 +33,14 @@ def encrypt(keyfile: Path, key_password: str):
         key = keyfile.read_text()
 
     account: LocalAccount = w3.eth.account.from_key(w3.eth.account.decrypt(key, key_password))
-    password = getpass("password:")
-    password2 = getpass("repeat password:")
-    if password != password2:
-        raise Exception("repeated password different from the original one")
+    print(account.key.hex(), account.address)
 
-    encrypted_account = account.encrypt(password)
-    print(json.dumps(encrypted_account, indent=2))
+    from hexbytes import HexBytes
+
+    # password = getpass("password:")
+    # password2 = getpass("repeat password:")
+    # if password != password2:
+    #     raise Exception("repeated password different from the original one")
+    #
+    # encrypted_account = account.encrypt(password)
+    # print(json.dumps(encrypted_account, indent=2))
