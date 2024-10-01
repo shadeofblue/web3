@@ -5,6 +5,7 @@ from web3 import Web3, HTTPProvider
 from .transfer import transfer as _transfer, encrypt as _encrypt
 from .erc20 import erc20_balance
 
+
 @click.group()
 def _cli():
     pass
@@ -30,7 +31,7 @@ def test(node_address: str, wallet_address: str):
 @_cli.command(help="test the connection, using a given address")
 @click.option(
     "--node-address",
-    type=str,
+            type=str,
     default="https://geth.golem.network:55555",
     # default="https://rpc.ankr.com/eth_holesky",
 )
