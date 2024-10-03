@@ -57,7 +57,7 @@ class Erc20:
         txdata = {"from": self.address, "nonce": nonce}
         if self.gas_price_wei:
             txdata["gasPrice"] = self.gas_price_wei
-        tx = self.fn.transfer(address, amount_wei).buildTransaction(txdata)
+        tx = self.fn.transfer(address, amount_wei).build_transaction(txdata)
         logger.debug("ERC-20 transfer: %s", tx)
         signed_tx = self.account.sign_transaction(tx)
         tx_hash = self.w3.eth.send_raw_transaction(signed_tx.rawTransaction)
